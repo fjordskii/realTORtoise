@@ -1,4 +1,4 @@
-# Send slow texts!
+# realTORtoise: Send slow texts 🐢
 
 - This repo allows you to send scheduled (aka slow) texts
 
