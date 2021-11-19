@@ -5,12 +5,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "quirrel": "quirrel"
   },
   "dependencies": {
     "next": "12.0.4",
+    "quirrel": "^1.7.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "twilio": "^3.71.2"
   },
   "devDependencies": {
     "@types/node": "16.11.8",
