@@ -1,0 +1,26 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar {
+  margin-bottom: auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+}
+
+.linkChild {
+  padding: 10px;
+}
+
+.main {
+  margin-bottom: auto;
+}
