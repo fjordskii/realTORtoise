@@ -14,3 +14,4 @@
 - launch https://ui.quirrel.dev/pending to see pending jobs
 
 - wait ⏰
+- smile
