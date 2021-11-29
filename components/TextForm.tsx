@@ -86,6 +86,7 @@ export function TextForm() {
         onClick={() =>
           sendMessage({
             phone,
+            phoneNumbers,
             message,
             date: computedDate,
             setError,

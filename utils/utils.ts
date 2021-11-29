@@ -4,33 +4,23 @@ type ISendMessage = ISendMessageParams & {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setError: React.Dispatch<React.SetStateAction<boolean>>;
   setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+  phoneNumbers: Array<string>;
 };
 
 export const sendMessage = async ({
-  phone,
+  phoneNumbers,
   message,
   date,
-  setLoading,
-  setError,
-  setSuccess,
 }: ISendMessage) => {
-  setLoading(true);
-  setError(false);
-  setSuccess(false);
-
-  const res = await fetch('/api/sendMessage', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ phone, message, date }),
-  });
-  const apiResponse = await res.json();
-
-  if (apiResponse.success) {
-    setSuccess(true);
-  } else {
-    setError(true);
-  }
-  setLoading(false);
+  Promise.all(
+    phoneNumbers.map(async (phone: string) => {
+      await fetch('/api/sendMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phone, message, date }),
+      });
+    })
+  );
 };
