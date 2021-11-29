@@ -1,7 +1,11 @@
-import styles from "../styles/Layout.module.css";
-import { NavBar } from "./NavBar";
+import styles from '../styles/Layout.module.css';
+import { NavBar } from './NavBar';
 
-export default function Layout({ children }) {
+interface ILayout {
+  children: any;
+}
+
+export default function Layout({ children }: ILayout) {
   return (
     <div className={styles.container}>
       <NavBar />
