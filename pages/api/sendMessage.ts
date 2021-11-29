@@ -7,19 +7,13 @@ export default async function sendMessage(
 ) {
   const { phone, message, date } = req.body;
 
-  try {
-    const result = await reminderQueue.enqueue(
-      { phone, message, date },
-      {
-        id: phone,
-        runAt: new Date(date),
-      }
-    );
-    return res.json({
-      status: 200,
-      data: { result },
-    });
-  } catch (err) {
-    res.json({ status: 400, detail: err });
-  }
+  await reminderQueue.enqueue(
+    { phone, message, date },
+    {
+      id: phone,
+      runAt: new Date(date),
+    }
+  );
+
+  res.status(200).end();
 }
