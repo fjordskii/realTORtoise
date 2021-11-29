@@ -2,7 +2,7 @@ import { Queue } from 'quirrel/next';
 import twilio from 'twilio';
 import { ISendMessageParams } from '../..';
 
-const SYSTEM_FROM_NUMBER = '17659785056';
+export const SYSTEM_FROM_NUMBER = '17659785056';
 
 export default Queue(
   'api/queues/sms',
