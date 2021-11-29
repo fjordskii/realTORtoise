@@ -17,7 +17,7 @@ export default async function sendMessage(
     );
     return res.json({
       status: 200,
-      data: { result, body: { phone, message, date } },
+      data: { result },
     });
   } catch (err) {
     res.json({ status: 400, detail: err });

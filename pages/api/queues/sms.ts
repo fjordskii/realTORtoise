@@ -12,12 +12,16 @@ export default Queue(
 
     const client = twilio(accountSid, token);
 
-    client.messages
-      .create({
+    console.log(client);
+
+    try {
+      client.messages.create({
         body: message,
         from: SYSTEM_FROM_NUMBER,
         to: phone,
-      })
-      .catch((err) => console.error(err));
+      });
+    } catch (err) {
+      console.error(err);
+    }
   }
 );
