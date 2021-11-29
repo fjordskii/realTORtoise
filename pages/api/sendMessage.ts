@@ -1,12 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import reminderQueue from "./queues/sms";
+import { NextApiRequest } from 'next';
+import reminderQueue from './queues/sms';
 
-export default async function sendMessage(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function sendMessage(req: NextApiRequest) {
   const { phone, message, date } = req.body;
-  console.log(phone, message, date);
+
   await reminderQueue.enqueue(
     { phone, message, date },
     {

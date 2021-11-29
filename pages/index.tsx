@@ -1,9 +1,9 @@
 // pages/index.tsx
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import React from "react";
-import { SmsForm } from "../components/SmsForm";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import React from 'react';
+import { TextForm } from '../components/TextForm';
 
 export interface ISendMessageParams {
   phone: string;
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <title>RealTORtoise - send slow texts</title>
       </Head>
 
-      <SmsForm />
+      <TextForm />
     </>
   );
 };

@@ -1,9 +1,11 @@
-import { Queue } from "quirrel/next";
-import twilio from "twilio";
-import { ISendMessageParams } from "../..";
+import { Queue } from 'quirrel/next';
+import twilio from 'twilio';
+import { ISendMessageParams } from '../..';
+
+const SYSTEM_FROM_NUMBER = '14784002362';
 
 export default Queue(
-  "api/queues/sms", // the route it's reachable under
+  'api/queues/sms',
   async ({ message, phone }: ISendMessageParams) => {
     const accountSid = <string>process.env.TWILIO_ACCOUNT_SID;
     const token = <string>process.env.TWILIO_AUTH_TOKEN;
@@ -12,7 +14,7 @@ export default Queue(
     client.messages
       .create({
         body: message,
-        from: "14784002362",
+        from: SYSTEM_FROM_NUMBER,
         to: phone,
       })
       .catch((err) => console.error(err));
