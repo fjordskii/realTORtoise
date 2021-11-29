@@ -15,7 +15,7 @@ export default async function sendMessage(
         runAt: new Date(date),
       }
     );
-    return res.json({ status: 200 });
+    return res.json({ status: 200, data: { phone, message, date } });
   } catch (err) {
     res.json({ status: 400, detail: err });
   }
