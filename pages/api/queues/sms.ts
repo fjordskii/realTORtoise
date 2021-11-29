@@ -11,8 +11,8 @@ export default Queue(
     const token = <string>process.env.TWILIO_AUTH_TOKEN;
 
     const client = twilio(accountSid, token);
-
-    console.log(client);
+    console.log(accountSid);
+    console.log(token);
 
     try {
       client.messages.create({
