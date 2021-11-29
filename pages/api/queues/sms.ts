@@ -11,15 +11,15 @@ export default Queue(
     const token = <string>process.env.TWILIO_AUTH_TOKEN;
 
     const client = twilio(accountSid, token);
-    console.log(accountSid);
-    console.log(token);
 
     try {
-      client.messages.create({
-        body: message,
-        from: SYSTEM_FROM_NUMBER,
-        to: phone,
-      });
+      client.messages
+        .create({
+          body: message,
+          from: SYSTEM_FROM_NUMBER,
+          to: phone,
+        })
+        .then((data) => console.log(data));
     } catch (err) {
       console.error(err);
     }
