@@ -3,6 +3,7 @@
 - This repo allows you to send scheduled (aka slow) texts
 
 ## to get started:
+
 - npm run dev
 - npm run quirrel
 - enter a phone number
@@ -10,6 +11,7 @@
 - enter a message
 - click send
 
-- launch https://ui.quirrel.dev/pending to see pending jobs 
+- launch https://ui.quirrel.dev/pending to see pending jobs
 
 - wait ⏰
+- smile, you did it
