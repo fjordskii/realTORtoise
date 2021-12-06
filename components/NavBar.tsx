@@ -5,15 +5,15 @@ export function NavBar() {
   return (
     <div className={styles.navbar}>
       <Link href="/">
-        <a className={styles.linkChild}>Home</a>
+        <a className={styles.linkChild}>SMS</a>
       </Link>
       |
-      <Link href="/about">
-        <a className={styles.linkChild}>About Us</a>
+      <Link href="/recipients">
+        <a className={styles.linkChild}>Recipients</a>
       </Link>
       |
-      <Link href="/contact">
-        <a className={styles.linkChild}>Contact</a>
+      <Link href="/groups">
+        <a className={styles.linkChild}>Groups</a>
       </Link>
     </div>
   );

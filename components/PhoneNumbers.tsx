@@ -28,6 +28,7 @@ export function PhoneNumbers({
           value={phone}
           onChange={handlePhoneChange}
           required
+          type="text"
           className={(styles.mb3, styles.input)}
           onKeyDown={handleKeyDown}
           minLength={10}
