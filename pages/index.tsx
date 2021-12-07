@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import { TextForm } from '../components/TextForm';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export interface ISendMessageParams {
   phone: string;
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <TextForm />
+      <ThemeToggle />
     </>
   );
 };

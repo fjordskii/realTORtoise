@@ -22,6 +22,7 @@
     "react-datepicker": "^4.3.0",
     "react-dom": "17.0.2",
     "terminal.css": "^0.7.2",
+    "theme-ui": "^0.12.1",
     "twilio": "^3.71.2"
   },
   "devDependencies": {

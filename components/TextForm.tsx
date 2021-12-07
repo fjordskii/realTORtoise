@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+
 import React, { useMemo, useState } from 'react';
 import styles from '../styles/TextForm.module.css';
 import { sendMessage } from '../utils/utils';
@@ -55,7 +57,13 @@ export function TextForm() {
   return (
     <div className={styles.form}>
       <div className="logo terminal-prompt">
-        <span>Send 🐢 SMS</span>
+        <span
+          sx={() => ({
+            color: 'black',
+          })}
+        >
+          Send 🐢 SMS
+        </span>
       </div>
       <hr />
       {/* Select Country  */}
@@ -75,13 +83,13 @@ export function TextForm() {
       <TextMessage message={message} setMessage={setMessage} />
       <div className={styles.flexColumn}>
         <h6>the message will be sent at:</h6>
-        <div className="terminal-alert terminal-alert terminal-alert-primary">
+        <div className="terminal-alert terminal-alert terminal-alert-default">
           <h6> {computedDate}</h6>
         </div>
       </div>
       <button
         style={{ zIndex: '0' }}
-        className="btn btn-primary btn-block"
+        className="btn btn-default btn-block"
         disabled={loading}
         onClick={() =>
           sendMessage({
